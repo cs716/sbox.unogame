@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnoGame.Models
 {
-	public class Card
+	public struct Card
 	{
 		public enum CardValue
 		{

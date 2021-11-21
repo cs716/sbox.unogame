@@ -20,13 +20,11 @@ namespace UnoGame.UI.Components
 		private void OnMouseOver()
 		{
 			AddClass( "hover" );
-			Log.Info( "Hover ON" );
 		}
 
 		private void OnMouseOut()
 		{
 			RemoveClass( "hover" );
-			Log.Info( "Hover OFF" );
 		}
 
 		protected override void OnClick( MousePanelEvent e )

@@ -19,7 +19,6 @@ namespace UnoGame
 	/// </summary>
 	public partial class Game : Sandbox.Game
 	{
-		[Net]
 		public GameDeckManager DeckManager { get; set; } = new();
 
 		public enum GameState

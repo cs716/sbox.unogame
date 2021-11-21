@@ -47,7 +47,7 @@ namespace UnoGame.UI
 			Components.Button button1 = new Components.Button();
 			button1.Text = "Deal Card";
 			button1.AddClass( "DrawCards" );
-			button1.AddEventListener( "OnClick", Game.ClientCardDrawRequest );
+			button1.AddEventListener( "OnClick", () => Game.ClientCardDrawRequest() );
 			RootPanel.AddChild( button1 );
 
 			Components.Button button2 = new Components.Button();
