@@ -1,0 +1,76 @@
+﻿Card {
+    border: 2px solid #FFF;
+    border-radius: 15px;
+    background-image: url("textures/cards/uno-back.jpg");
+    background-size: cover;
+    overflow: visible;
+    width: 150px;
+    height: 225px;
+}
+
+Card .num_top {
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+    margin-left: 5px;
+    text-decoration: underline;
+    text-shadow: 1px -1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+Card .num_bottom {
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+    bottom: 0px;
+    right: 5px;
+    position: absolute;
+    transform: rotate(180deg);
+    text-decoration: underline;
+    text-shadow: 1px -1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+Card .num_middle {
+    font-size: 92px;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+Card.Rotated {
+    transform: rotate(90deg);
+}
+
+Card.color_blue {
+    background-image: url("textures/cards/uno-blue.jpg") !important;
+}
+Card.color_blue .num_middle {
+    color: #5455FF;
+}
+
+Card.color_red {
+    background-image: url("textures/cards/uno-red.jpg") !important;
+}
+Card.color_red .num_middle {
+    color: #FF5555;
+    text-shadow: 
+        2px -2px 0 #000, 
+        -2px -2px 0 #000, 
+        -2px 3px 0 #000, 
+        2px 3px 0 #000;
+}
+
+Card.color_green {
+    background-image: url("textures/cards/uno-green.jpg") !important;
+}
+Card.color_green .num_middle {
+    color: #55AA55;
+}
+
+Card.color_yellow {
+    background-image: url("textures/cards/uno-yellow.jpg") !important;
+}
+Card.color_yellow .num_middle {
+    color: #FFAA01;
+}

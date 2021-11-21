@@ -1,0 +1,19 @@
+﻿Button {
+    border-radius: 25px;
+    border: 2px solid #FFF;
+    background: radial-gradient(black, red);
+    padding: 10px 30px 10px 30px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 36px;
+    height: 75px;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.hover {
+    cursor: pointer;
+    background: radial-gradient(red, #ff6161);
+    background-position-x: 200px;
+    transition: background-position-x 1s ease-in;
+}

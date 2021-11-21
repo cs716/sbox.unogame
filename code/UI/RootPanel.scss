@@ -1,0 +1,16 @@
+﻿RootPanel {
+    background-color: gray;
+    pointer-events: all;
+}
+
+Button.DrawCards {
+    bottom: 50px;
+    right: 25px;
+    position: absolute;
+}
+
+Button.SortHand {
+    bottom: 150px;
+    right: 25px;
+    position: absolute;
+}

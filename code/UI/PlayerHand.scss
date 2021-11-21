@@ -1,0 +1,49 @@
+﻿PlayerHand {
+    position: absolute;
+    transition: linear 2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+PlayerHand Card {
+    margin: 0 -50px;
+    //transition: transform 0.1s linear;
+}
+
+PlayerHand Card.owned:hover {
+    z-index: 9999;
+    transform: translate(0, -50px);
+    //transition: transform 0.1s linear;
+    cursor: pointer;
+
+    .num_bottom {
+        transform: rotate(180deg) translate(0, -100px);
+    }
+}
+
+.UP {
+    top: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.LEFT {
+    left: 0;
+    height: 100%;
+    width: 200px;
+}
+
+.RIGHT {
+    right: 0;
+    height: 100%;
+    width: 200px;
+}
+
+.DOWN {
+    bottom: 25px;
+    height: 200px;
+    width: 100%;
+    z-index: 99;
+}
