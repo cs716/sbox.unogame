@@ -66,7 +66,6 @@ namespace UnoGame
 		public override void ClientJoined( Client client )
 		{
 			UnoPlayer player = new UnoPlayer();
-
 			client.Pawn = player;
 
 			base.ClientJoined( client );

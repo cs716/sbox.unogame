@@ -19,15 +19,15 @@ namespace UnoGame.Helpers
 					Card card2 = comp2 as Card;
 					if ( card1 != null && card2 != null )
 					{
-						if ( (int)card1.card.color > (int)card2.card.color )
+						if ( (int)card1.color > (int)card2.color )
 							return 1;
-						else if ( (int)card1.card.color < (int)card2.card.color )
+						else if ( (int)card1.color < (int)card2.color )
 							return -1;
 						else
 						{
-							if ( (int)card1.card.value > (int)card2.card.value )
+							if ( (int)card1.value > (int)card2.value )
 								return 1;
-							else if ( (int)card1.card.value < (int)card2.card.value )
+							else if ( (int)card1.value < (int)card2.value )
 								return -1;
 							else
 								return 0;

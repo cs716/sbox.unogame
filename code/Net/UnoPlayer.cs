@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnoGame.Models;
 using Sandbox;
 using UnoGame.UI;
+using UnoGame.Helpers;
 
 namespace UnoGame.Net
 {
 	public partial class UnoPlayer : Entity
 	{
-		[Net, Local]
 		private IList<Models.Card> Hand { get; set; }
 		[Net]
 		public int HandCount { get; set; }
@@ -22,18 +22,20 @@ namespace UnoGame.Net
 		{
 			Log.Info( "AddCardToHand 2" );
 			Log.Info( "SERVER? " + IsServer );
-			Log.Info( card.value );
-			Log.Info( card.action );
-			Log.Info( card.color );
+			Log.Info( Client.Name );
 			Hand.Add(card);
 			HandCount++;
-			AddCardToPlayerHand( To.Single( this ), card );
+			Log.Info( $"Calling AddCardToPlayerHand( To.Single( this ), {(int)card.value}, {(int)card.color}, {(int)card.action}); " );
+			//AddCardToPlayerHand( To.Single( this ), (int)card.value, (int)card.color, (int)card.action );
+			AddCardToPlayerHand( To.Single( this ) );
 		}
 
 		[ClientRpc]
-		public void AddCardToPlayerHand(Models.Card card)
+		//int cardValue, int cardColor, int cardAction
+		public void AddCardToPlayerHand()
 		{
 			Log.Info( "AddCardToHand 1" );
+			/*Models.Card card = new Models.Card( (Enums.CardValue)cardValue, (Enums.CardAction)cardAction, (Enums.CardColor)cardColor );
 			IEnumerable<PlayerHand> hands = Local.Hud.ChildrenOfType<PlayerHand>();
 			foreach ( PlayerHand hand in hands )
 			{
@@ -42,7 +44,7 @@ namespace UnoGame.Net
 					UI.Card cardPanel = new UI.Card( card, true );
 					hand.AddChild( cardPanel );
 				}
-			}
+			}*/
 		}
 
 		public void PlayCard(int index)
