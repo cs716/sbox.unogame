@@ -80,6 +80,7 @@ namespace UnoGame
 		public static void ClientCardDrawRequest()
 		{
 			UnoPlayer player = ConsoleSystem.Caller.Pawn as UnoPlayer;
+			player.Transmit = TransmitType.Always;
 			Models.Card card = Instance.DeckManager.GetNextCard();
 			player.AddCard( card );
 		}

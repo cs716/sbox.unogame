@@ -64,10 +64,10 @@ namespace UnoGame.Managers
 			currentDeck.Clear();
 
 			// Create 1 of each color 0
-			Models.Card r0 = new Models.Card( Enums.CardValue.ZERO, Enums.CardAction.NONE, Enums.CardColor.RED );
-			Models.Card g0 = new Models.Card( Enums.CardValue.ZERO, Enums.CardAction.NONE, Enums.CardColor.GREEN );
-			Models.Card b0 = new Models.Card( Enums.CardValue.ZERO, Enums.CardAction.NONE, Enums.CardColor.BLUE );
-			Models.Card y0 = new Models.Card( Enums.CardValue.ZERO, Enums.CardAction.NONE, Enums.CardColor.YELLOW );
+			Models.Card r0 = new Models.Card( Models.Card.CardValue.ZERO, Models.Card.CardAction.NONE, Models.Card.CardColor.RED );
+			Models.Card g0 = new Models.Card( Models.Card.CardValue.ZERO, Models.Card.CardAction.NONE, Models.Card.CardColor.GREEN );
+			Models.Card b0 = new Models.Card( Models.Card.CardValue.ZERO, Models.Card.CardAction.NONE, Models.Card.CardColor.BLUE );
+			Models.Card y0 = new Models.Card( Models.Card.CardValue.ZERO, Models.Card.CardAction.NONE, Models.Card.CardColor.YELLOW );
 			currentDeck.Add( r0 );
 			currentDeck.Add( g0 );
 			currentDeck.Add( b0 );
@@ -77,10 +77,10 @@ namespace UnoGame.Managers
 			{
 				for ( int i = 1; i <= 9; i++ )
 				{
-					Models.Card r = new Models.Card( (Enums.CardValue)i, Enums.CardAction.NONE, Enums.CardColor.RED );
-					Models.Card g = new Models.Card( (Enums.CardValue)i, Enums.CardAction.NONE, Enums.CardColor.GREEN );
-					Models.Card b = new Models.Card( (Enums.CardValue)i, Enums.CardAction.NONE, Enums.CardColor.BLUE );
-					Models.Card y = new Models.Card( (Enums.CardValue)i, Enums.CardAction.NONE, Enums.CardColor.YELLOW );
+					Models.Card r = new Models.Card( (Models.Card.CardValue)i, Models.Card.CardAction.NONE, Models.Card.CardColor.RED );
+					Models.Card g = new Models.Card( (Models.Card.CardValue)i, Models.Card.CardAction.NONE, Models.Card.CardColor.GREEN );
+					Models.Card b = new Models.Card( (Models.Card.CardValue)i, Models.Card.CardAction.NONE, Models.Card.CardColor.BLUE );
+					Models.Card y = new Models.Card( (Models.Card.CardValue)i, Models.Card.CardAction.NONE, Models.Card.CardColor.YELLOW );
 					currentDeck.Add( r );
 					currentDeck.Add( g );
 					currentDeck.Add( b );
@@ -88,44 +88,44 @@ namespace UnoGame.Managers
 				}
 
 				// 2x plus 2s for each color
-				Models.Card p2r = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.DRAW_TWO, Enums.CardColor.RED );
-				Models.Card p2g = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.DRAW_TWO, Enums.CardColor.GREEN );
-				Models.Card p2b = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.DRAW_TWO, Enums.CardColor.BLUE );
-				Models.Card p2y = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.DRAW_TWO, Enums.CardColor.YELLOW );
+				Models.Card p2r = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.DRAW_TWO, Models.Card.CardColor.RED );
+				Models.Card p2g = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.DRAW_TWO, Models.Card.CardColor.GREEN );
+				Models.Card p2b = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.DRAW_TWO, Models.Card.CardColor.BLUE );
+				Models.Card p2y = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.DRAW_TWO, Models.Card.CardColor.YELLOW );
 				currentDeck.Add( p2r );
 				currentDeck.Add( p2g );
 				currentDeck.Add( p2b );
 				currentDeck.Add( p2y );
 
 				// 2x reverse for each color
-				Models.Card rr = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.REVERSE, Enums.CardColor.RED );
-				Models.Card rg = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.REVERSE, Enums.CardColor.GREEN );
-				Models.Card rb = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.REVERSE, Enums.CardColor.BLUE );
-				Models.Card ry = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.REVERSE, Enums.CardColor.YELLOW );
+				Models.Card rr = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.REVERSE, Models.Card.CardColor.RED );
+				Models.Card rg = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.REVERSE, Models.Card.CardColor.GREEN );
+				Models.Card rb = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.REVERSE, Models.Card.CardColor.BLUE );
+				Models.Card ry = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.REVERSE, Models.Card.CardColor.YELLOW );
 				currentDeck.Add( rr );
 				currentDeck.Add( rg );
 				currentDeck.Add( rb );
 				currentDeck.Add( ry );
 
 				// 2x skip for each color
-				Models.Card sr = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.SKIP, Enums.CardColor.RED );
-				Models.Card sg = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.SKIP, Enums.CardColor.GREEN );
-				Models.Card sb = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.SKIP, Enums.CardColor.BLUE );
-				Models.Card sy = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.SKIP, Enums.CardColor.YELLOW );
+				Models.Card sr = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.SKIP, Models.Card.CardColor.RED );
+				Models.Card sg = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.SKIP, Models.Card.CardColor.GREEN );
+				Models.Card sb = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.SKIP, Models.Card.CardColor.BLUE );
+				Models.Card sy = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.SKIP, Models.Card.CardColor.YELLOW );
 				currentDeck.Add( sr );
 				currentDeck.Add( sg );
 				currentDeck.Add( sb );
 				currentDeck.Add( sy );
 
 				// 4 Wild Cards
-				Models.Card wild1 = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.WILD, Enums.CardColor.NULL );
-				Models.Card wild2 = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.WILD, Enums.CardColor.NULL );
+				Models.Card wild1 = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.WILD, Models.Card.CardColor.NULL );
+				Models.Card wild2 = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.WILD, Models.Card.CardColor.NULL );
 				currentDeck.Add( wild1 );
 				currentDeck.Add( wild2 );
 
 				// 4 Draw 4s
-				Models.Card draw41 = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.DRAW_FOUR, Enums.CardColor.NULL );
-				Models.Card draw42 = new Models.Card( Enums.CardValue.NULL, Enums.CardAction.DRAW_FOUR, Enums.CardColor.NULL );
+				Models.Card draw41 = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.DRAW_FOUR, Models.Card.CardColor.NULL );
+				Models.Card draw42 = new Models.Card( Models.Card.CardValue.NULL, Models.Card.CardAction.DRAW_FOUR, Models.Card.CardColor.NULL );
 				currentDeck.Add( draw41 );
 				currentDeck.Add( draw42 );
 			}

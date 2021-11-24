@@ -7,14 +7,14 @@ namespace UnoGame.UI
 	public partial class Card : Panel
 	{
 
-		public Enums.CardValue value { get; private set; } = Enums.CardValue.NULL;
-		public Enums.CardColor color { get; private set; } = Enums.CardColor.NULL;
-		public Enums.CardAction action { get; private set; } = Enums.CardAction.NONE;
+		public Models.Card.CardValue value { get; private set; } = Models.Card.CardValue.NULL;
+		public Models.Card.CardColor color { get; private set; } = Models.Card.CardColor.NULL;
+		public Models.Card.CardAction action { get; private set; } = Models.Card.CardAction.NONE;
 		public Card(Models.Card card, bool isOwnCard)
 		{
 			StyleSheet.Load( "UI/Card.scss" );
 
-			if ( card.value != Enums.CardValue.NULL )
+			if ( card.value != Models.Card.CardValue.NULL )
 			{
 				AddClass( "value_" + card.value.ToString() );
 				Add.Label( ((int)card.value).ToString(), "num_top" );
@@ -22,7 +22,7 @@ namespace UnoGame.UI
 				Add.Label( ((int)card.value).ToString(), "num_middle" );
 			}
 
-			if ( card.action != Enums.CardAction.NONE )
+			if ( card.action != Models.Card.CardAction.NONE )
 			{
 				AddClass( "action_" + card.action.ToString() );
 			}
